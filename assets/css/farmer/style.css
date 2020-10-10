@@ -1,0 +1,384 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,
+header,
+dl,
+dt,
+dd,
+p,
+h1,
+h2,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3",
+    "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-size: 14px;
+}
+img {
+  vertical-align: bottom;
+}
+.inner {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  width: 100%;
+  display: flex;
+  color: #d3c6a6;
+  height: 240px;
+}
+.title {
+  margin-left: auto;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+.title p {
+  margin-left: 20px;
+  font-weight: normal;
+  font-size: 10px;
+  color: #d3c6a6;
+}
+/*ここからトグルメニュー*/
+.toggle {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  z-index: 12;
+  width: 302px;
+  height: 650px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-image: url(../../images/togglemenu/menu_back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 80px;
+  display: none;
+  border: solid 1px #011b29;
+  box-sizing: border-box;
+}
+.toggle ul {
+  position: relative;
+  margin-left: 0px;
+  margin-right: 0px;
+  display: block;
+  padding-left: 10px;
+}
+
+.toggle ul li {
+  line-height: 48px;
+  margin-bottom: 45px;
+  vertical-align: middle;
+}
+
+.toggle ul li span {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.toggle ul li:nth-child(5) {
+  margin-bottom: 10px;
+}
+
+.toggle ul li:first-child {
+  margin-top: 80px;
+  padding-left: 0px;
+}
+
+.musubi {
+  position: absolute;
+  left: 0px;
+}
+
+.toggle dd {
+  color: #011b29;
+  font-size: 20px;
+  line-height: 55px;
+  margin-left: 20px;
+}
+
+.toggle a {
+  text-decoration: none;
+  color: #011b29;
+  transition: color 0.5s ease 0s;
+}
+
+.toggle a:hover {
+  color: #fff;
+  text-decoration: inherit;
+}
+
+/*ハンバーガーボタンの設置*/
+button {
+  position: fixed;
+  top: 4%;
+  left: 2.4%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.hum {
+  width: 55px;
+  height: 52px;
+  z-index: 13;
+}
+
+button:focus {
+  outline: 0;
+}
+/*-----------------松尾ここからいじる-------------------*/
+main #ds_fx {
+  display: flex;
+  position: relative;
+}
+/*------------------メインタイトル-------------------*/
+main .main_title p,
+h1 {
+  color: #011b29;
+  margin-left: 410px;
+  text-align: center;
+}
+.main_title {
+  height: 240px;
+  text-align: center;
+  background-color: #f2eee5;
+  padding-top: 30px;
+}
+.main_title img {
+  width: 80px;
+  height: 80px;
+}
+.main_title p {
+  font-size: 16px;
+  line-height: 36px;
+  width: 140px;
+  margin-left: 410px;
+  text-align: center;
+  border-bottom: solid 10px;
+}
+.main_title h1 {
+  font-size: 24px;
+  width: 140px;
+  margin-left: 410px;
+  text-align: center;
+  border-bottom: solid 10px;
+}
+/*--------------------#mainVisual--------------------*/
+main #mainVisual {
+  height: 720px;
+  background-color: #fff;
+  padding-top: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+main #mainVisual h2 {
+  color: #d3c6a6;
+  text-align: center;
+  font-size: 46px;
+  vertical-align: 400px;
+  font-weight: normal;
+  line-height: 138px;
+}
+main #mainVisual p {
+  color: #d3c6a6;
+  text-align: center;
+  font-size: 18px;
+  vertical-align: 400px;
+  line-height: 36px;
+}
+/*----------------トマト⇔農家の横スクロール----------------------*/
+main .h3 {
+  font-size: 30px;
+  line-height: 40px;
+}
+/*スライド(横スクロール)部分*/
+#slide {
+  position: relative;
+  overflow: hidden;
+  height: 480px;
+  width: 480px;
+}
+#slide ul {
+  position: absolute;
+  width: 1920px;
+}
+#slide li {
+  float: left;
+  width: 480px;
+  list-style-type: none;
+}
+/*ボタン部分*/
+#prevBtn {
+  position: absolute;
+  top: 210px;
+  left: 0px;
+  background: none;
+  border: none;
+  outline: none;
+}
+#nextBtn {
+  position: absolute;
+  top: 210px;
+  right: 0px;
+  background: none;
+  border: none;
+  outline: none;
+}
+/*------------------農家たちのcomment---------------------*/
+main #ds_fx #comment {
+  position: absolute;
+  left: 480px;
+  background-image: url(../../images/ul1_farmers&vegetable/section_back_sandbeige.jpg);
+  background-repeat: no-repeat;
+  color: #011b29;
+  height: 480px;
+  width: 480px;
+  padding-left: 30px;
+}
+main #mainVisual {
+  height: 720px;
+}
+main #ds_fx #comment .h3,
+p {
+  color: #011b29;
+}
+main #ds_fx #comment .h3 span {
+  color: #ffa500;
+}
+/*-----------------------comment終了からfooterまでのつなぎ-----------------------*/
+main {
+  background-color: #011b29;
+  height: 3120px;
+}
+
+/*------------------------マツオココマデ----------------*/
+footer {
+  padding-top: 135px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.footer_logo img {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: -130px;
+  left: 365px;
+}
+footer ul {
+  display: flex;
+  margin-left: 360px;
+}
+footer ul li {
+  margin-right: 10px;
+  margin-bottom: 250px;
+}
+footer ul li img {
+  width: 55px;
+  height: 65px;
+}
+.copy {
+  text-align: center;
+}
+.totop img {
+  width: 45px;
+  height: 95px;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
+@media screen and (max-width: 640px) {
+  .inner {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  header {
+    max-width: 100%;
+    height: auto;
+  }
+  .title img {
+    width: 70px;
+    height: 70px;
+  }
+  .hum_btn {
+    margin-left: 10px;
+  }
+  main {
+    max-width: 100%;
+  }
+  .main_title p {
+    margin-left: 105px;
+  }
+  .mainvisual {
+    max-width: 100%;
+    flex-direction: column;
+  }
+  .mainvisual h2 {
+    font-size: 18px;
+  }
+  .map {
+    position: static;
+  }
+  .access {
+    max-width: 100%;
+    flex-direction: column;
+    height: auto;
+    font-size: 10px;
+    padding-top: 30px;
+  }
+  section {
+    margin-top: 0;
+  }
+  .left,
+  .right {
+    margin-left: 0;
+    margin-left: 50px;
+  }
+  .box_tel {
+    margin-top: 0;
+    margin-bottom: 100px;
+  }
+  footer {
+    max-width: 100%;
+    height: auto;
+  }
+  .footer_logo img {
+    width: 150px;
+    height: 150px;
+    top: -70px;
+    left: 120px;
+  }
+  footer ul {
+    margin-left: 0;
+    margin-left: 100px;
+  }
+  footer ul li {
+    margin-bottom: 0;
+  }
+  footer ul li img {
+    width: 25px;
+    height: 30px;
+  }
+  .totop img {
+    width: 25px;
+    height: 60px;
+  }
+}
+
+/* トランジション時間のオーバーライド (Bootstrap)*/
+.carousel-fade .carousel-item {
+  transition-duration: 2s !important;
+  transition-property: opacity !important;
+}
